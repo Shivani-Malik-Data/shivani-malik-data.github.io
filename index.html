@@ -1,26 +1,226 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shivani Malik | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shivani Malik's Data Analytics Portfolio">
+  <title>Shivani Malik | Data Analytics Portfolio</title>
+
   <style>
+    /* General website styling */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
       background: #10243a;
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
+      color: #ffffff;
+      line-height: 1.7;
     }
-    h1 { font-size: 48px; }
-    p { font-size: 20px; }
+
+    /* Main content container */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 24px;
+    }
+
+    /* Introduction section */
+    .hero {
+      text-align: center;
+      padding: 60px 0;
+    }
+
+    h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #cbd5e1;
+      font-size: 19px;
+    }
+
+    /* Section headings */
+    h2 {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+
+    /* Featured project card */
+    .project-card {
+      background: #1c344e;
+      border: 1px solid #36516a;
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+
+    .project-card h3 {
+      font-size: 23px;
+      margin-top: 0;
+      color: #ffffff;
+    }
+
+    .project-card p {
+      color: #d1dce8;
+      font-size: 16px;
+    }
+
+    /* Technology tags */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .skill {
+      background: #294662;
+      color: #dbeafe;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    /* GitHub project link */
+    .project-link {
+      display: inline-block;
+      background: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 11px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .project-link:hover {
+      background: #1d4ed8;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: #94a3b8;
+      border-top: 1px solid #36516a;
+      font-size: 14px;
+    }
+
+    /* Mobile-friendly layout */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .hero {
+        padding: 35px 0;
+      }
+
+      .project-card {
+        padding: 20px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <h1>Shivani Malik</h1>
-  <p>Graduate Data Analyst | Reporting Analyst</p>
-  <p>Welcome to my Data Analytics Portfolio</p>
+
+  <main class="container">
+
+    <!-- Introduction -->
+    <header class="hero">
+      <h1>Shivani Malik</h1>
+
+      <p class="subtitle">
+        Graduate Data Analyst | Reporting Analyst
+      </p>
+
+      <p>
+        Turning complex data into reliable reporting
+        and actionable business insights.
+      </p>
+    </header>
+
+    <!-- Featured Projects -->
+    <section id="projects">
+
+      <h2>Featured Projects</h2>
+
+      <!-- Victorian Council Project -->
+      <article class="project-card">
+
+        <h3>Victorian Council Financial Intelligence</h3>
+
+        <p>
+          Developed an end-to-end financial reporting solution
+          analysing 79 Victorian councils across five financial
+          years (2020–21 to 2024–25).
+        </p>
+
+        <p>
+          Built Databricks data pipelines using PySpark,
+          performed data cleaning and validation,
+          developed SQL-based financial KPIs and
+          dimensional models, and created executive
+          dashboards for financial performance monitoring,
+          trend analysis and council benchmarking.
+        </p>
+
+        <p>
+          <strong>Key focus:</strong>
+          Data quality, financial sustainability,
+          council benchmarking and executive reporting.
+        </p>
+
+        <!-- Technical Skills -->
+        <div class="skills">
+          <span class="skill">Databricks</span>
+          <span class="skill">PySpark</span>
+          <span class="skill">SQL</span>
+          <span class="skill">Delta Lake</span>
+          <span class="skill">Data Modelling</span>
+          <span class="skill">Data Validation</span>
+          <span class="skill">Financial Analytics</span>
+          <span class="skill">AI/BI Dashboards</span>
+        </div>
+
+        <!-- GitHub project link -->
+        <a
+          class="project-link"
+          href="https://github.com/Shivani-Malik-Data/victorian-council-financial-intelligence"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View GitHub Project
+        </a>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Shivani Malik | Data Analytics Portfolio</p>
+    <p>
+      <a
+        href="https://github.com/Shivani-Malik-Data"
+        style="color: #93c5fd;"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub Profile
+      </a>
+    </p>
+  </footer>
+
 </body>
 </html>
-
