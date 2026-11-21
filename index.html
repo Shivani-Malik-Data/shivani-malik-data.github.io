@@ -57,10 +57,36 @@
       text-decoration: underline;
     }
 
-    .container {
-      width: min(1100px, 92%);
-      margin: auto;
-    }
+  
+/* Wider layout for desktop screens */
+.container {
+  width: 92%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Keep long paragraphs comfortable to read */
+.about-card p,
+.project-card p {
+  line-height: 1.8;
+}
+
+/* Give projects more breathing room */
+.project-card {
+  padding: 36px;
+}
+
+/* Better mobile layout */
+@media (max-width: 700px) {
+  .container {
+    width: 94%;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
+
 
     section {
       padding: 70px 0;
