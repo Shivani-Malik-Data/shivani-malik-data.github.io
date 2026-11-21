@@ -1,130 +1,403 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shivani Malik's Data Analytics Portfolio">
+
+  <!-- Mobile-friendly viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+        content="Shivani Malik - Data Analytics, Business Intelligence and Data Engineering Portfolio">
+
   <title>Shivani Malik | Data Analytics Portfolio</title>
 
   <style>
-    /* General website styling */
+    /* ==========================
+       1. WEBSITE COLOURS
+       ========================== */
+
+    :root {
+      --bg: #0b1729;
+      --surface: #13243b;
+      --surface-light: #1c304b;
+      --border: #2c4561;
+      --text: #f5f8fc;
+      --muted: #b4c5d8;
+      --accent: #60a5fa;
+      --accent-dark: #2563eb;
+    }
+
+    /* ==========================
+       2. GENERAL STYLING
+       ========================== */
+
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #10243a;
-      color: #ffffff;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
 
-    /* Main content container */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
     .container {
-      max-width: 1000px;
+      width: min(1100px, 92%);
       margin: auto;
-      padding: 40px 24px;
     }
 
-    /* Introduction section */
-    .hero {
-      text-align: center;
-      padding: 60px 0;
+    section {
+      padding: 70px 0;
+      scroll-margin-top: 85px;
     }
 
-    h1 {
-      font-size: 44px;
-      margin-bottom: 10px;
+    h1, h2, h3 {
+      line-height: 1.25;
     }
 
-    .subtitle {
-      color: #cbd5e1;
-      font-size: 19px;
-    }
-
-    /* Section headings */
     h2 {
-      font-size: 28px;
-      margin-bottom: 24px;
+      font-size: 32px;
+      margin-bottom: 25px;
     }
 
-    /* Featured project card */
-    .project-card {
-      background: #1c344e;
-      border: 1px solid #36516a;
-      border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 30px;
-      text-align: left;
+    .muted {
+      color: var(--muted);
     }
 
-    .project-card h3 {
-      font-size: 23px;
-      margin-top: 0;
-      color: #ffffff;
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: bold;
     }
 
-    .project-card p {
-      color: #d1dce8;
-      font-size: 16px;
+    /* ==========================
+       3. NAVIGATION
+       ========================== */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 23, 41, 0.97);
+      border-bottom: 1px solid var(--border);
     }
 
-    /* Technology tags */
-    .skills {
+    .nav-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+    }
+
+    .logo {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin: 20px 0;
+      gap: 22px;
     }
 
-    .skill {
-      background: #294662;
-      color: #dbeafe;
-      padding: 6px 12px;
-      border-radius: 6px;
-      font-size: 13px;
-    }
-
-    /* GitHub project link */
-    .project-link {
-      display: inline-block;
-      background: #2563eb;
-      color: #ffffff;
-      text-decoration: none;
-      padding: 11px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .project-link:hover {
-      background: #1d4ed8;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 35px 20px;
-      color: #94a3b8;
-      border-top: 1px solid #36516a;
+    .nav-links a {
+      color: var(--muted);
       font-size: 14px;
     }
 
-    /* Mobile-friendly layout */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 34px;
+    /* ==========================
+       4. INTRODUCTION
+       ========================== */
+
+    .hero {
+      padding: 110px 0 90px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 64px);
+      max-width: 850px;
+      margin: 15px 0;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      max-width: 730px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--accent-dark);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: white;
+    }
+
+    /* ==========================
+       5. ABOUT
+       ========================== */
+
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: 16px;
+    }
+
+    /* ==========================
+       6. PROJECT CARDS
+       ========================== */
+
+    .project-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    .project-card h3 {
+      font-size: 26px;
+      margin: 10px 0;
+    }
+
+    .project-card p {
+      color: var(--muted);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 25px 0;
+    }
+
+    .stat {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 18px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 26px;
+      color: white;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* ==========================
+       7. DASHBOARD GALLERY
+       ========================== */
+
+    .dashboard-gallery {
+      margin: 30px 0;
+    }
+
+    .gallery-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .gallery-tab {
+      background: var(--surface-light);
+      border: 1px solid var(--border);
+      color: white;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .gallery-tab.active {
+      background: var(--accent-dark);
+      border-color: var(--accent);
+    }
+
+    .gallery-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .gallery-image:hover {
+      opacity: 0.96;
+    }
+
+    .gallery-caption {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    /* ==========================
+       8. TECHNOLOGY TAGS
+       ========================== */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 22px 0;
+    }
+
+    .tag {
+      background: var(--surface-light);
+      color: #dbeafe;
+      border: 1px solid var(--border);
+      padding: 5px 11px;
+      border-radius: 6px;
+      font-size: 12px;
+    }
+
+    /* ==========================
+       9. SKILLS
+       ========================== */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 25px;
+    }
+
+    .skill-card h3 {
+      color: var(--accent);
+      margin-top: 0;
+    }
+
+    /* ==========================
+       10. CONTACT AND FOOTER
+       ========================== */
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 35px;
+      border-radius: 16px;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding: 25px;
+      font-size: 13px;
+    }
+
+    /* ==========================
+       11. MOBILE DESIGN
+       ========================== */
+
+    @media (max-width: 700px) {
+      .nav-content {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: center;
+        gap: 12px;
       }
 
       .hero {
-        padding: 35px 0;
+        padding: 65px 0;
       }
 
       .project-card {
-        padding: 20px;
+        padding: 18px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+    }
+
+    /* Accessibility: reduce motion when requested */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      .btn {
+        transition: none;
       }
     }
   </style>
@@ -132,111 +405,486 @@
 
 <body>
 
-  <main class="container">
+  <!-- ==========================
+       NAVIGATION
+       ========================== -->
 
-    <!-- Introduction -->
-    <header class="hero">
-      <h1>Shivani Malik</h1>
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container nav-content">
 
-      <p class="subtitle">
-        Graduate Data Analyst | Reporting Analyst
-      </p>
+      <a href="#home" class="logo">
+        Shivani Malik<span>.</span>
+      </a>
 
-      <p>
-        Turning complex data into reliable reporting
-        and actionable business insights.
-      </p>
-    </header>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-    <!-- Featured Projects -->
-    <section id="projects">
+    </div>
+  </nav>
 
-      <h2>Featured Projects</h2>
+  <main>
 
-      <!-- Victorian Council Project -->
-      <article class="project-card">
+    <!-- ==========================
+         INTRODUCTION
+         ========================== -->
 
-        <h3>Victorian Council Financial Intelligence</h3>
-        
-<!-- Executive Dashboard -->
-<img src="images/executive-overview.png"
-     alt="Executive Financial Overview"
-     style="width:100%; border-radius:12px; margin:15px 0;">
+    <section class="hero" id="home">
+      <div class="container">
 
-<!-- Financial Trends Dashboard -->
-<img src="images/financial-trends.png"
-     alt="Financial Trends and Benchmarking"
-     style="width:100%; border-radius:12px; margin:15px 0;">
-
-<!-- Data Quality Dashboard -->
-<img src="images/data-quality.png"
-     alt="Data Quality and Management Insights"
-     style="width:100%; border-radius:12px; margin:15px 0;">
-
-
-        <p>
-          Developed an end-to-end financial reporting solution
-          analysing 79 Victorian councils across five financial
-          years (2020–21 to 2024–25).
-        </p>
-
-        <p>
-          Built Databricks data pipelines using PySpark,
-          performed data cleaning and validation,
-          developed SQL-based financial KPIs and
-          dimensional models, and created executive
-          dashboards for financial performance monitoring,
-          trend analysis and council benchmarking.
-        </p>
-
-        <p>
-          <strong>Key focus:</strong>
-          Data quality, financial sustainability,
-          council benchmarking and executive reporting.
-        </p>
-
-        <!-- Technical Skills -->
-        <div class="skills">
-          <span class="skill">Databricks</span>
-          <span class="skill">PySpark</span>
-          <span class="skill">SQL</span>
-          <span class="skill">Delta Lake</span>
-          <span class="skill">Data Modelling</span>
-          <span class="skill">Data Validation</span>
-          <span class="skill">Financial Analytics</span>
-          <span class="skill">AI/BI Dashboards</span>
+        <div class="eyebrow">
+          Data Analytics | Business Intelligence
         </div>
 
-        <!-- GitHub project link -->
-        <a
-          class="project-link"
-          href="https://github.com/Shivani-Malik-Data/victorian-council-financial-intelligence"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View GitHub Project
-        </a>
+        <h1>
+          Hi, I'm Shivani Malik.
+          <br>
+          <span>Turning data into decisions.</span>
+        </h1>
 
-      </article>
+        <p>
+          Graduate Data Analyst and Reporting Analyst
+          with a Master of Data Science from RMIT University.
+          I build reliable data pipelines, analyse complex
+          datasets and create reporting solutions that
+          support better business decisions.
+        </p>
 
+        <div class="buttons">
+          <a href="#projects" class="btn btn-primary">
+            Explore My Projects
+          </a>
+
+          <a href="https://github.com/Shivani-Malik-Data"
+             class="btn btn-outline"
+             target="_blank"
+             rel="noopener noreferrer">
+            GitHub Profile
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================
+         ABOUT
+         ========================== -->
+
+    <section id="about">
+      <div class="container">
+
+        <div class="eyebrow">About Me</div>
+        <h2>Building reliable analytics from the ground up.</h2>
+
+        <div class="about-card">
+
+          <p>
+            I'm a Data Science graduate from RMIT University
+            with experience in data preparation, validation,
+            SQL analytics, data engineering and business
+            intelligence reporting.
+          </p>
+
+          <p>
+            During my internship at Arrotex Pharmaceuticals,
+            I cleaned and validated more than 7,300
+            healthcare and consumer records, investigated
+            discrepancies and supported repeatable
+            reconciliation workflows.
+          </p>
+
+          <p>
+            My project work includes building Databricks
+            lakehouse pipelines, developing SQL-based
+            reporting datasets and creating executive
+            dashboards using public Australian datasets.
+          </p>
+
+          <p>
+            I'm particularly interested in Graduate Data
+            Analyst and Reporting Analyst opportunities
+            across utilities, infrastructure and local
+            government.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================
+         PROJECTS
+         ========================== -->
+
+    <section id="projects">
+      <div class="container">
+
+        <div class="eyebrow">Selected Work</div>
+        <h2>Featured Projects</h2>
+
+        <!-- PROJECT 1: VICTORIAN COUNCIL -->
+
+        <article class="project-card">
+
+          <div class="eyebrow">
+            Project 01 | Local Government Analytics
+          </div>
+
+          <h3>Victorian Council Financial Intelligence</h3>
+
+          <p>
+            Developed an end-to-end financial reporting
+            solution analysing 79 Victorian councils
+            across five financial years, from 2020-21
+            to 2024-25.
+          </p>
+
+          <!-- Project metrics -->
+          <div class="stats">
+
+            <div class="stat">
+              <strong>79</strong>
+              <span>Victorian Councils</span>
+            </div>
+
+            <div class="stat">
+              <strong>5</strong>
+              <span>Financial Years</span>
+            </div>
+
+            <div class="stat">
+              <strong>3</strong>
+              <span>Dashboard Pages</span>
+            </div>
+
+          </div>
+
+          <p>
+            Built Databricks and PySpark pipelines for
+            data ingestion, cleaning and validation.
+            Developed SQL-based financial KPIs,
+            dimensional models, council benchmarking
+            and executive reporting dashboards.
+          </p>
+
+          <!-- INTERACTIVE DASHBOARD GALLERY -->
+          <div class="dashboard-gallery">
+
+            <h4>Explore the Dashboard</h4>
+
+            <div class="gallery-tabs"
+                 role="group"
+                 aria-label="Dashboard pages">
+
+              <button class="gallery-tab active"
+                      type="button"
+                      data-image="images/executive-overview.png"
+                      data-caption="Executive Financial Overview">
+                Executive Overview
+              </button>
+
+              <button class="gallery-tab"
+                      type="button"
+                      data-image="images/financial-trends.png"
+                      data-caption="Financial Trends and Benchmarking">
+                Financial Trends
+              </button>
+
+              <button class="gallery-tab"
+                      type="button"
+                      data-image="images/data-quality.png"
+                      data-caption="Data Quality and Management Insights">
+                Data Quality
+              </button>
+
+            </div>
+
+            <!-- Click the image to view it full-size -->
+            <a id="dashboard-link"
+               href="images/executive-overview.png"
+               target="_blank"
+               rel="noopener noreferrer">
+
+              <img
+                id="dashboard-image"
+                class="gallery-image"
+                src="images/executive-overview.png"
+                alt="Executive Financial Overview Dashboard"
+              >
+
+            </a>
+
+            <p id="dashboard-caption"
+               class="gallery-caption"
+               aria-live="polite">
+              Executive Financial Overview
+              - click the image to view full size.
+            </p>
+
+          </div>
+
+          <p>
+            <strong>Key analytical findings:</strong>
+            The project's financial screening identified
+            9 high analytical priority councils and
+            13 councils requiring financial review
+            under the defined screening criteria.
+          </p>
+
+          <p>
+            These are project-defined analytical flags,
+            not official government financial risk ratings.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Databricks</span>
+            <span class="tag">PySpark</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Delta Lake</span>
+            <span class="tag">Data Modelling</span>
+            <span class="tag">Data Validation</span>
+            <span class="tag">Financial Analytics</span>
+            <span class="tag">AI/BI Dashboards</span>
+          </div>
+
+          <a
+            href="https://github.com/Shivani-Malik-Data/victorian-council-financial-intelligence"
+            class="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer">
+            View GitHub Project
+          </a>
+
+        </article>
+
+        <!-- PROJECT 2: VICTORIAN ROADS -->
+
+        <article class="project-card">
+
+          <div class="eyebrow">
+            Project 02 | Infrastructure & Asset Analytics
+          </div>
+
+          <h3>Victorian Roads Asset Analytics</h3>
+
+          <p>
+            Developed a data engineering and reporting
+            workflow for approximately 91,000 Victorian
+            road asset and spatial records as part of
+            an RMIT project.
+          </p>
+
+          <div class="stats">
+
+            <div class="stat">
+              <strong>91K+</strong>
+              <span>Asset & Spatial Records</span>
+            </div>
+
+            <div class="stat">
+              <strong>3</strong>
+              <span>Lakehouse Layers</span>
+            </div>
+
+            <div class="stat">
+              <strong>Power BI</strong>
+              <span>Executive Reporting</span>
+            </div>
+
+          </div>
+
+          <p>
+            Implemented Bronze, Silver and Gold
+            data processing using Databricks and PySpark,
+            with Delta Lake storage and AWS S3.
+            Developed SQL aggregations and Power BI
+            dashboards to support asset management
+            analysis and resource planning.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Databricks</span>
+            <span class="tag">PySpark</span>
+            <span class="tag">AWS S3</span>
+            <span class="tag">Delta Lake</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Asset Analytics</span>
+          </div>
+
+          <!-- Add the real project repository URL here later -->
+          <p class="muted">
+            Project documentation and dashboard
+            examples available on request.
+          </p>
+
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ==========================
+         SKILLS
+         ========================== -->
+
+    <section id="skills">
+      <div class="container">
+
+        <div class="eyebrow">Technical Expertise</div>
+        <h2>Skills & Technologies</h2>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <h3>Data Analytics</h3>
+            <p>
+              SQL, Python, Pandas, Excel,
+              data cleaning, exploratory analysis,
+              KPI reporting and trend analysis.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Business Intelligence</h3>
+            <p>
+              Power BI, DAX, Power Query,
+              dimensional modelling, executive
+              dashboards and stakeholder reporting.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Data Engineering</h3>
+            <p>
+              Databricks, PySpark, Apache Spark,
+              Delta Lake, Bronze/Silver/Gold
+              pipelines and data integration.
+            </p>
+          </div>
+
+          <div class="skill-card">
+            <h3>Cloud & Data Quality</h3>
+            <p>
+              AWS S3, Azure fundamentals,
+              data validation, reconciliation,
+              quality assurance and SQL testing.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================
+         CONTACT
+         ========================== -->
+
+    <section id="contact">
+      <div class="container">
+
+        <div class="eyebrow">Get in Touch</div>
+        <h2>Let's Connect</h2>
+
+        <div class="contact-card">
+
+          <p>
+            I'm interested in graduate and early-career
+            opportunities in data analytics, reporting
+            and business intelligence, particularly
+            within utilities, infrastructure and
+            local government.
+          </p>
+
+          <div class="buttons">
+
+            <a href="mailto:shivanimalik2357@gmail.com"
+               class="btn btn-primary">
+              Email Me
+            </a>
+
+            <a href="https://github.com/Shivani-Malik-Data"
+               class="btn btn-outline"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub
+            </a>
+
+          </div>
+
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <!-- Footer -->
+  <!-- ==========================
+       FOOTER
+       ========================== -->
+
   <footer>
-    <p>Shivani Malik | Data Analytics Portfolio</p>
     <p>
-      <a
-        href="https://github.com/Shivani-Malik-Data"
-        style="color: #93c5fd;"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub Profile
-      </a>
+      Shivani Malik | Data Analytics Portfolio
+    </p>
+
+    <p>
+      Built with HTML, CSS and JavaScript.
+      Hosted on GitHub Pages.
     </p>
   </footer>
+
+  <!-- ==========================
+       JAVASCRIPT DASHBOARD GALLERY
+       ========================== -->
+
+  <script>
+    // Find the dashboard gallery elements.
+    const tabs = document.querySelectorAll(".gallery-tab");
+    const image = document.getElementById("dashboard-image");
+    const link = document.getElementById("dashboard-link");
+    const caption = document.getElementById("dashboard-caption");
+
+    // Change the displayed screenshot when a tab is clicked.
+    tabs.forEach(function(tab) {
+
+      tab.addEventListener("click", function() {
+
+        // Remove the active style from every tab.
+        tabs.forEach(function(otherTab) {
+          otherTab.classList.remove("active");
+          otherTab.setAttribute("aria-pressed", "false");
+        });
+
+        // Highlight the selected tab.
+        tab.classList.add("active");
+        tab.setAttribute("aria-pressed", "true");
+
+        // Read the image filename and caption.
+        const imagePath = tab.dataset.image;
+        const imageCaption = tab.dataset.caption;
+
+        // Update the screenshot and full-size link.
+        image.src = imagePath;
+        image.alt = imageCaption + " Dashboard";
+        link.href = imagePath;
+
+        // Update the caption.
+        caption.textContent =
+          imageCaption + " - click the image to view full size.";
+
+      });
+
+    });
+
+    // Set the initial accessibility state.
+    tabs.forEach(function(tab) {
+      tab.setAttribute(
+        "aria-pressed",
+        tab.classList.contains("active") ? "true" : "false"
+      );
+    });
+  </script>
 
 </body>
 </html>
