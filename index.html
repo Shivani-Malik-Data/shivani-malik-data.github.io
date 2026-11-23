@@ -449,6 +449,17 @@
   }
 }
 
+  
+/* Photo beside homepage introduction */
+.hero-layout { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
+.hero-text { flex: 1; min-width: 0; }
+.hero-photo { flex: 0 0 280px; }
+.profile-photo { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 20px; border: 2px solid var(--accent); }
+@media (max-width: 800px) {
+  .hero-layout { flex-direction: column-reverse; align-items: flex-start; gap: 30px; }
+  .hero-photo { flex: none; width: 200px; max-width: 100%; }
+}
+
   </style>
 </head>
 
@@ -482,7 +493,8 @@
          ========================== -->
 
     <section class="hero" id="home">
-      <div class="container">
+      <div class="container hero-layout">
+        <div class="hero-text">
 
         <div class="eyebrow">
           Data Analytics | Business Intelligence
@@ -515,7 +527,15 @@
           </a>
         </div>
 
-      </div>
+        </div> <!-- End of introduction text -->
+
+        <!-- Professional profile photograph -->
+        <div class="hero-photo">
+          <img src="profile.jpg" alt="Shivani Malik - Data Analyst"
+               class="profile-photo" width="280" height="280">
+        </div>
+
+      </div> <!-- End of hero layout -->
     </section>
 
     <!-- ==========================
