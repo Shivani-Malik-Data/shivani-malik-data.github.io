@@ -1,18 +1,14 @@
 
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <!-- Mobile-friendly viewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <meta name="description"
-        content="Shivani Malik - Data Analytics, Business Intelligence and Data Engineering Portfolio">
-
-  <title>Shivani Malik | Data Analytics Portfolio</title>
-
-  <style>
+<meta charset="utf-8"/>
+<!-- Mobile-friendly viewport -->
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Shivani Malik - Data Analytics, Business Intelligence and Data Engineering Portfolio" name="description"/>
+<title>Shivani Malik | Data Analytics Portfolio</title>
+<style>
     /* ==========================
        1. WEBSITE COLOURS
        ========================== */
@@ -341,28 +337,6 @@
     }
 
     /* ==========================
-       9. SKILLS
-       ========================== */
-
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .skill-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 25px;
-    }
-
-    .skill-card h3 {
-      color: var(--accent);
-      margin-top: 0;
-    }
-
-    /* ==========================
        10. CONTACT AND FOOTER
        ========================== */
 
@@ -404,10 +378,6 @@
       }
 
       .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .skills-grid {
         grid-template-columns: 1fr;
       }
 
@@ -462,175 +432,131 @@
 
   </style>
 </head>
-
 <body>
-
-  <!-- ==========================
+<!-- ==========================
        NAVIGATION
        ========================== -->
-
-  <nav class="navbar" aria-label="Main navigation">
-    <div class="container nav-content">
-
-      <a href="#home" class="logo">
+<nav aria-label="Main navigation" class="navbar">
+<div class="container nav-content">
+<a class="logo" href="#home">
         Shivani Malik<span>.</span>
-      </a>
+</a>
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
 
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-
-    </div>
-  </nav>
-
-  <main>
-
-    <!-- ==========================
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+<main>
+<!-- ==========================
          INTRODUCTION
          ========================== -->
-
-    <section class="hero" id="home">
-      <div class="container hero-layout">
-        <div class="hero-text">
-
-        <div class="eyebrow">
+<section class="hero" id="home">
+<div class="container hero-layout">
+<div class="hero-text">
+<div class="eyebrow">
           Data Analytics | Business Intelligence
         </div>
-
-        <h1>
+<h1>
           Hi, I'm Shivani Malik.
-          <br>
-          <span>Turning data into decisions.</span>
-        </h1>
-
-        <p>
+          <br/>
+<span>Turning data into decisions.</span>
+</h1>
+<p>
           Graduate Data Analyst and Reporting Analyst
           with a Master of Data Science from RMIT University.
           I build reliable data pipelines, analyse complex
           datasets and create reporting solutions that
           support better business decisions.
         </p>
-
-        <div class="buttons">
-          <a href="#projects" class="btn btn-primary">
+<div class="buttons">
+<a class="btn btn-primary" href="#projects">
             Explore My Projects
           </a>
-
-          <a href="https://github.com/Shivani-Malik-Data"
-             class="btn btn-outline"
-             target="_blank"
-             rel="noopener noreferrer">
+<a class="btn btn-outline" href="https://github.com/Shivani-Malik-Data" rel="noopener noreferrer" target="_blank">
             GitHub Profile
           </a>
-        </div>
-
-        </div> <!-- End of introduction text -->
-
-        <!-- Professional profile photograph -->
-        <div class="hero-photo">
-          <img src="shivani%20profile_pic.png" alt="Shivani Malik - Data Analyst"
-               class="profile-photo" width="300" height="375">
-        </div>
-
-      </div> <!-- End of hero layout -->
-    </section>
-
-    <!-- ==========================
+</div>
+</div> <!-- End of introduction text -->
+<!-- Professional profile photograph -->
+<div class="hero-photo">
+<img alt="Shivani Malik - Data Analyst" class="profile-photo" height="375" src="shivani%20profile_pic.png" width="300"/>
+</div>
+</div> <!-- End of hero layout -->
+</section>
+<!-- ==========================
          ABOUT
          ========================== -->
-
-    <section id="about">
-      <div class="container">
-
-        <div class="eyebrow">About Me</div>
-        <h2>Building reliable analytics from the ground up.</h2>
-
-        <div class="about-card">
-
-          <p>
+<section id="about">
+<div class="container">
+<div class="eyebrow">About Me</div>
+<h2>Building reliable analytics from the ground up.</h2>
+<div class="about-card">
+<p>
             I'm a Data Science graduate from RMIT University
             with experience in data preparation, validation,
             SQL analytics, data engineering and business
             intelligence reporting.
           </p>
-
-          <p>
+<p>
             During my internship at Arrotex Pharmaceuticals,
             I cleaned and validated more than 7,300
             healthcare and consumer records, investigated
             discrepancies and supported repeatable
             reconciliation workflows.
           </p>
-
-          <p>
+<p>
             My project work includes building Databricks
             lakehouse pipelines, developing SQL-based
             reporting datasets and creating executive
             dashboards using public Australian datasets.
           </p>
-
-          <p>
+<p>
             I'm particularly interested in Graduate Data
             Analyst and Reporting Analyst opportunities
             across utilities, infrastructure and local
             government.
           </p>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================
+</div>
+</div>
+</section>
+<!-- ==========================
          PROJECTS
          ========================== -->
-
-    <section id="projects">
-      <div class="container">
-
-        <div class="eyebrow">Selected Work</div>
-        <h2>Featured Projects</h2>
-
-        <!-- PROJECT 1: VICTORIAN COUNCIL -->
-
-        <article class="project-card">
-
-          <div class="eyebrow">
+<section id="projects">
+<div class="container">
+<div class="eyebrow">Selected Work</div>
+<h2>Featured Projects</h2>
+<!-- PROJECT 1: VICTORIAN COUNCIL -->
+<article class="project-card">
+<div class="eyebrow">
             Project 01 | Local Government Analytics
           </div>
-
-          <h3>Victorian Council Financial Intelligence</h3>
-
-          <p>
+<h3>Victorian Council Financial Intelligence</h3>
+<p>
             Developed an end-to-end financial reporting
             solution analysing 79 Victorian councils
             across five financial years, from 2020-21
             to 2024-25.
           </p>
-
-          <!-- Project metrics -->
-          <div class="stats">
-
-            <div class="stat">
-              <strong>79</strong>
-              <span>Victorian Councils</span>
-            </div>
-
-            <div class="stat">
-              <strong>5</strong>
-              <span>Financial Years</span>
-            </div>
-
-            <div class="stat">
-              <strong>3</strong>
-              <span>Dashboard Pages</span>
-            </div>
-
-          </div>
-
-          <p>
+<!-- Project metrics -->
+<div class="stats">
+<div class="stat">
+<strong>79</strong>
+<span>Victorian Councils</span>
+</div>
+<div class="stat">
+<strong>5</strong>
+<span>Financial Years</span>
+</div>
+<div class="stat">
+<strong>3</strong>
+<span>Dashboard Pages</span>
+</div>
+</div>
+<p>
             Built Databricks and PySpark pipelines for
             data ingestion, cleaning and validation.
             Developed SQL-based financial KPIs,
@@ -638,159 +564,102 @@
             and executive reporting dashboards.
           </p>
 <!-- ADD BUSINESS INSIGHTS HERE -->
-    <div class="business-insights">
-      <h3>Key Business Insights</h3>
-
-      <p>
+<div class="business-insights">
+<h3>Key Business Insights</h3>
+<p>
         Analysed financial performance across
         79 Victorian councils over five years.
       </p>
-
-      <p>
+<p>
         Identified 9 councils for high analytical
         priority and 13 requiring financial review
         using project-defined screening criteria.
       </p>
-
-      <p>
+<p>
         Benchmarked financial KPIs against
         council-category peer medians.
       </p>
-
-      <p>
+<p>
         Reported 99.75% completeness across
         1,580 expected KPI observations.
       </p>
-    </div>
-
-    <!-- INTERACTIVE DASHBOARD GALLERY -->
-          <!-- INTERACTIVE DASHBOARD GALLERY -->
-          <div class="dashboard-gallery">
-
-            <h4>Explore the Dashboard</h4>
-
-            <div class="gallery-tabs"
-                 role="group"
-                 aria-label="Dashboard pages">
-
-              <button class="gallery-tab active"
-                      type="button"
-                      data-image="images/executive-overview.png"
-                      data-caption="Executive Financial Overview">
+</div>
+<!-- INTERACTIVE DASHBOARD GALLERY -->
+<!-- INTERACTIVE DASHBOARD GALLERY -->
+<div class="dashboard-gallery">
+<h4>Explore the Dashboard</h4>
+<div aria-label="Dashboard pages" class="gallery-tabs" role="group">
+<button class="gallery-tab active" data-caption="Executive Financial Overview" data-image="images/executive-overview.png" type="button">
                 Executive Overview
               </button>
-
-              <button class="gallery-tab"
-                      type="button"
-                      data-image="images/financial-trends.png"
-                      data-caption="Financial Trends and Benchmarking">
+<button class="gallery-tab" data-caption="Financial Trends and Benchmarking" data-image="images/financial-trends.png" type="button">
                 Financial Trends
               </button>
-
-              <button class="gallery-tab"
-                      type="button"
-                      data-image="images/data-quality.png"
-                      data-caption="Data Quality and Management Insights">
+<button class="gallery-tab" data-caption="Data Quality and Management Insights" data-image="images/data-quality.png" type="button">
                 Data Quality
               </button>
-
-            </div>
-
-            <!-- Click the image to view it full-size -->
-            <a id="dashboard-link"
-               href="images/executive-overview.png"
-               target="_blank"
-               rel="noopener noreferrer">
-
-              <img
-                id="dashboard-image"
-                class="gallery-image"
-                src="images/executive-overview.png"
-                alt="Executive Financial Overview Dashboard"
-              >
-
-            </a>
-
-            <p id="dashboard-caption"
-               class="gallery-caption"
-               aria-live="polite">
+</div>
+<!-- Click the image to view it full-size -->
+<a href="images/executive-overview.png" id="dashboard-link" rel="noopener noreferrer" target="_blank">
+<img alt="Executive Financial Overview Dashboard" class="gallery-image" id="dashboard-image" src="images/executive-overview.png"/>
+</a>
+<p aria-live="polite" class="gallery-caption" id="dashboard-caption">
               Executive Financial Overview
               - click the image to view full size.
             </p>
-
-          </div>
-
-          <p>
-            <strong>Key analytical findings:</strong>
+</div>
+<p>
+<strong>Key analytical findings:</strong>
             The project's financial screening identified
             9 high analytical priority councils and
             13 councils requiring financial review
             under the defined screening criteria.
           </p>
-
-          <p>
+<p>
             These are project-defined analytical flags,
             not official government financial risk ratings.
           </p>
-
-          <div class="tags">
-            <span class="tag">Databricks</span>
-            <span class="tag">PySpark</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Delta Lake</span>
-            <span class="tag">Data Modelling</span>
-            <span class="tag">Data Validation</span>
-            <span class="tag">Financial Analytics</span>
-            <span class="tag">AI/BI Dashboards</span>
-          </div>
-
-          <a
-            href="https://github.com/Shivani-Malik-Data/victorian-council-financial-intelligence"
-            class="btn btn-primary"
-            target="_blank"
-            rel="noopener noreferrer">
+<div class="tags">
+<span class="tag">Databricks</span>
+<span class="tag">PySpark</span>
+<span class="tag">SQL</span>
+<span class="tag">Delta Lake</span>
+<span class="tag">Data Modelling</span>
+<span class="tag">Data Validation</span>
+<span class="tag">Financial Analytics</span>
+<span class="tag">AI/BI Dashboards</span>
+</div>
+<a class="btn btn-primary" href="https://github.com/Shivani-Malik-Data/victorian-council-financial-intelligence" rel="noopener noreferrer" target="_blank">
             View GitHub Project
           </a>
-
-        </article>
-
-        <!-- PROJECT 2: VICTORIAN ROADS -->
-
-        <article class="project-card">
-
-          <div class="eyebrow">
-            Project 02 | Infrastructure & Asset Analytics
+</article>
+<!-- PROJECT 2: VICTORIAN ROADS -->
+<article class="project-card">
+<div class="eyebrow">
+            Project 02 | Infrastructure &amp; Asset Analytics
           </div>
-
-          <h3>Victorian Roads Asset Analytics</h3>
-
-          <p>
+<h3>Victorian Roads Asset Analytics</h3>
+<p>
             Developed a data engineering and reporting
             workflow for approximately 91,000 Victorian
             road asset and spatial records as part of
             an RMIT project.
           </p>
-
-          <div class="stats">
-
-            <div class="stat">
-              <strong>91K+</strong>
-              <span>Asset & Spatial Records</span>
-            </div>
-
-            <div class="stat">
-              <strong>3</strong>
-              <span>Lakehouse Layers</span>
-            </div>
-
-            <div class="stat">
-              <strong>Power BI</strong>
-              <span>Executive Reporting</span>
-            </div>
-
-          </div>
-
-          <p>
+<div class="stats">
+<div class="stat">
+<strong>91K+</strong>
+<span>Asset &amp; Spatial Records</span>
+</div>
+<div class="stat">
+<strong>3</strong>
+<span>Lakehouse Layers</span>
+</div>
+<div class="stat">
+<strong>Power BI</strong>
+<span>Executive Reporting</span>
+</div>
+</div>
+<p>
             Implemented Bronze, Silver and Gold
             data processing using Databricks and PySpark,
             with Delta Lake storage and AWS S3.
@@ -798,144 +667,54 @@
             dashboards to support asset management
             analysis and resource planning.
           </p>
-
-          <div class="tags">
-            <span class="tag">Databricks</span>
-            <span class="tag">PySpark</span>
-            <span class="tag">AWS S3</span>
-            <span class="tag">Delta Lake</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Power BI</span>
-            <span class="tag">Asset Analytics</span>
-          </div>
-
-          <!-- Add the real project repository URL here later -->
-          <p class="muted">
+<div class="tags">
+<span class="tag">Databricks</span>
+<span class="tag">PySpark</span>
+<span class="tag">AWS S3</span>
+<span class="tag">Delta Lake</span>
+<span class="tag">SQL</span>
+<span class="tag">Power BI</span>
+<span class="tag">Asset Analytics</span>
+</div>
+<!-- Add the real project repository URL here later -->
+<p class="muted">
             Project documentation and dashboard
             examples available on request.
           </p>
-
-        </article>
-
-      </div>
-    </section>
-
-    <!-- ==========================
+</article>
+</div>
+</section>
+<!-- ==========================
          SKILLS
          ========================== -->
 
-    <section id="skills">
-      <div class="container">
-
-        <div class="eyebrow">Technical Expertise</div>
-        <h2>Skills & Technologies</h2>
-
-        <div class="skills-grid">
-
-          <div class="skill-card">
-            <h3>Data Analytics</h3>
-            <p>
-              SQL, Python, Pandas, Excel,
-              data cleaning, exploratory analysis,
-              KPI reporting and trend analysis.
-            </p>
-          </div>
-
-          <div class="skill-card">
-            <h3>Business Intelligence</h3>
-            <p>
-              Power BI, DAX, Power Query,
-              dimensional modelling, executive
-              dashboards and stakeholder reporting.
-            </p>
-          </div>
-
-          <div class="skill-card">
-            <h3>Data Engineering</h3>
-            <p>
-              Databricks, PySpark, Apache Spark,
-              Delta Lake, Bronze/Silver/Gold
-              pipelines and data integration.
-            </p>
-          </div>
-
-          <div class="skill-card">
-            <h3>Cloud & Data Quality</h3>
-            <p>
-              AWS S3, Azure fundamentals,
-              data validation, reconciliation,
-              quality assurance and SQL testing.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================
+<!-- ==========================
          CONTACT
          ========================== -->
-
-    <section id="contact">
-      <div class="container">
-
-        <div class="eyebrow">Get in Touch</div>
-        <h2>Let's Connect</h2>
-
-        <div class="contact-card">
-
-          <p>
-            
-          I'm a Data Science graduate from RMIT University,
-          with hands-on experience in SQL, Power BI,
-          Python and Databricks. I focus on improving data quality,
-          analysing operational performance and translating
-          complex datasets into clear business insights.
-
-          </p>
-
-          <div class="buttons">
-
-            <a href="mailto:shivanimalik2357@gmail.com"
-               class="btn btn-primary">
-              Email Me
-            </a>
-
-            <a href="https://github.com/Shivani-Malik-Data"
-               class="btn btn-outline"
-               target="_blank"
-               rel="noopener noreferrer">
-              GitHub
-            </a>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ==========================
+<section id="contact">
+<div class="container">
+<div class="eyebrow">Get in Touch</div>
+<h2>Let's Connect</h2>
+<div class="contact-card"><p>For opportunities, collaborations or questions about my projects, feel free to get in touch.</p><a class="btn btn-primary" href="mailto:shivanimalik2357@gmail.com">Contact Me</a></div>
+</div>
+</section>
+</main>
+<!-- ==========================
        FOOTER
        ========================== -->
-
-  <footer>
-    <p>
+<footer>
+<p>
       Shivani Malik | Data Analytics Portfolio
     </p>
-
-    <p>
+<p>
       Built with HTML, CSS and JavaScript.
       Hosted on GitHub Pages.
     </p>
-  </footer>
-
-  <!-- ==========================
+</footer>
+<!-- ==========================
        JAVASCRIPT DASHBOARD GALLERY
        ========================== -->
-
-  <script>
+<script>
     // Find the dashboard gallery elements.
     const tabs = document.querySelectorAll(".gallery-tab");
     const image = document.getElementById("dashboard-image");
@@ -982,6 +761,5 @@
       );
     });
   </script>
-
 </body>
 </html>
