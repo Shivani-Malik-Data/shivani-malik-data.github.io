@@ -529,10 +529,56 @@
 <div class="container">
 <div class="eyebrow">Selected Work</div>
 <h2>Featured Projects</h2>
-<!-- PROJECT 1: VICTORIAN COUNCIL -->
+<!-- PROJECT 1: VISTA -->
+<article class="project-card">
+<div class="eyebrow">Project 01 | Transport Analytics &amp; Applied AI</div>
+<h3>Victorian Transport Intelligence &amp; Agentic AI Reporting Assistant</h3>
+<p>Built an AI-powered analytics and reporting assistant using Victorian VISTA 2024–25 survey data, enabling users to ask natural-language questions and generate aggregate transport reports.</p>
+<div class="stats">
+<div class="stat"><strong>52,657</strong><span>Combined Dataset Records</span></div>
+<div class="stat"><strong>19,864</strong><span>Trip Observations</span></div>
+<div class="stat"><strong>5</strong><span>Source Datasets</span></div>
+</div>
+<p>Developed a multi-agent workflow with a SQL Analyst for read-only PostgreSQL queries and an ETL Analyst for data quality checks and aggregate CSV reporting. Implemented SQL structural validation, restricted database access and approved reporting tools.</p>
+<div class="business-insights">
+<h3>Key Business Insights</h3>
+<p>Analysed transport modes, regional trip counts and travel times. Vehicle Driver was the most frequently recorded mode, with 10,454 trip observations.</p>
+<p>Recorded an unweighted mean travel time of 18.30 minutes and a median of 11 minutes across 19,864 valid trip observations.</p>
+<p>These are unweighted survey sample results, not population-wide estimates. Combined records are not unique survey participants.</p>
+</div>
+<div class="dashboard-gallery">
+<h4>Explore the AI Reporting Assistant</h4>
+<div aria-label="VISTA application screenshots" class="gallery-tabs" role="group">
+<button class="gallery-tab active" data-caption="Application overview and transport KPIs" data-image="01_homepage.png" type="button">Homepage</button>
+<button class="gallery-tab" data-caption="Natural-language analytics and reporting questions" data-image="02_example_questions.png" type="button">Example Questions</button>
+<button class="gallery-tab" data-caption="Transport mode counts and proportions" data-image="03_transport_modes.png" type="button">Transport Modes</button>
+<button class="gallery-tab" data-caption="LGA trip counts and generated SQL" data-image="04_regional_analysis.png" type="button">Regional Analysis</button>
+<button class="gallery-tab" data-caption="Data quality reporting and blocked individual-record request" data-image="05_etl_reporting_and_security.png" type="button">ETL &amp; Security</button>
+<button class="gallery-tab" data-caption="Reporting controls and CSV download options" data-image="06_reporting_controls_and_csv_downloads.png" type="button">Reporting Controls &amp; CSV</button>
+</div>
+<a href="01_homepage.png" id="vista-link" rel="noopener noreferrer" target="_blank">
+<img alt="Application overview and transport KPIs" class="gallery-image" id="vista-image" src="01_homepage.png"/>
+</a>
+<p aria-live="polite" class="gallery-caption" id="vista-caption">Application overview and transport KPIs - click the image to view full size.</p>
+</div>
+<div class="tags">
+<span class="tag">Python</span>
+<span class="tag">PostgreSQL</span>
+<span class="tag">SQL</span>
+<span class="tag">LangGraph</span>
+<span class="tag">OpenAI</span>
+<span class="tag">Streamlit</span>
+<span class="tag">Pandas</span>
+<span class="tag">Data Quality</span>
+<span class="tag">Agentic AI</span>
+<span class="tag">SQL Validation</span>
+</div>
+<a class="btn btn-primary" href="https://github.com/Shivani-Malik-Data/vista-transport-intelligence-ai" rel="noopener noreferrer" target="_blank">View GitHub Project</a>
+</article>
+<!-- PROJECT 2: VICTORIAN COUNCIL -->
 <article class="project-card">
 <div class="eyebrow">
-            Project 01 | Local Government Analytics
+            Project 02 | Local Government Analytics
           </div>
 <h3>Victorian Council Financial Intelligence</h3>
 <p>
@@ -633,55 +679,7 @@
             View GitHub Project
           </a>
 </article>
-<!-- PROJECT 2: VICTORIAN ROADS -->
-<article class="project-card">
-<div class="eyebrow">
-            Project 02 | Infrastructure &amp; Asset Analytics
-          </div>
-<h3>Victorian Roads Asset Analytics</h3>
-<p>
-            Developed a data engineering and reporting
-            workflow for approximately 91,000 Victorian
-            road asset and spatial records as part of
-            an RMIT project.
-          </p>
-<div class="stats">
-<div class="stat">
-<strong>91K+</strong>
-<span>Asset &amp; Spatial Records</span>
-</div>
-<div class="stat">
-<strong>3</strong>
-<span>Lakehouse Layers</span>
-</div>
-<div class="stat">
-<strong>Power BI</strong>
-<span>Executive Reporting</span>
-</div>
-</div>
-<p>
-            Implemented Bronze, Silver and Gold
-            data processing using Databricks and PySpark,
-            with Delta Lake storage and AWS S3.
-            Developed SQL aggregations and Power BI
-            dashboards to support asset management
-            analysis and resource planning.
-          </p>
-<div class="tags">
-<span class="tag">Databricks</span>
-<span class="tag">PySpark</span>
-<span class="tag">AWS S3</span>
-<span class="tag">Delta Lake</span>
-<span class="tag">SQL</span>
-<span class="tag">Power BI</span>
-<span class="tag">Asset Analytics</span>
-</div>
-<!-- Add the real project repository URL here later -->
-<p class="muted">
-            Project documentation and dashboard
-            examples available on request.
-          </p>
-</article>
+
 </div>
 </section>
 <!-- ==========================
@@ -715,50 +713,27 @@
        JAVASCRIPT DASHBOARD GALLERY
        ========================== -->
 <script>
-    // Find the dashboard gallery elements.
-    const tabs = document.querySelectorAll(".gallery-tab");
-    const image = document.getElementById("dashboard-image");
-    const link = document.getElementById("dashboard-link");
-    const caption = document.getElementById("dashboard-caption");
-
-    // Change the displayed screenshot when a tab is clicked.
-    tabs.forEach(function(tab) {
-
-      tab.addEventListener("click", function() {
-
-        // Remove the active style from every tab.
-        tabs.forEach(function(otherTab) {
-          otherTab.classList.remove("active");
-          otherTab.setAttribute("aria-pressed", "false");
+    // Keep each project's screenshot gallery independent.
+    document.querySelectorAll(".dashboard-gallery").forEach(function(gallery) {
+      const tabs = gallery.querySelectorAll(".gallery-tab");
+      const image = gallery.querySelector(".gallery-image");
+      const link = image.closest("a");
+      const caption = gallery.querySelector(".gallery-caption");
+      tabs.forEach(function(tab) {
+        tab.setAttribute("aria-pressed", tab.classList.contains("active") ? "true" : "false");
+        tab.addEventListener("click", function() {
+          tabs.forEach(function(otherTab) {
+            otherTab.classList.remove("active");
+            otherTab.setAttribute("aria-pressed", "false");
+          });
+          tab.classList.add("active");
+          tab.setAttribute("aria-pressed", "true");
+          image.src = tab.dataset.image;
+          image.alt = tab.dataset.caption + (image.id === "dashboard-image" ? " Dashboard" : "");
+          link.href = tab.dataset.image;
+          caption.textContent = tab.dataset.caption + " - click the image to view full size.";
         });
-
-        // Highlight the selected tab.
-        tab.classList.add("active");
-        tab.setAttribute("aria-pressed", "true");
-
-        // Read the image filename and caption.
-        const imagePath = tab.dataset.image;
-        const imageCaption = tab.dataset.caption;
-
-        // Update the screenshot and full-size link.
-        image.src = imagePath;
-        image.alt = imageCaption + " Dashboard";
-        link.href = imagePath;
-
-        // Update the caption.
-        caption.textContent =
-          imageCaption + " - click the image to view full size.";
-
       });
-
-    });
-
-    // Set the initial accessibility state.
-    tabs.forEach(function(tab) {
-      tab.setAttribute(
-        "aria-pressed",
-        tab.classList.contains("active") ? "true" : "false"
-      );
     });
   </script>
 </body>
